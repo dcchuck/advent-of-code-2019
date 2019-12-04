@@ -11,3 +11,10 @@ export function readSingleLineInput(inputPath: string): string[] {
   const nextStep = inputArray.split(',');
   return nextStep;
 }
+
+export function someDay(inputPath: string): string[][] {
+  const inputArray = fs.readFileSync(inputPath).toString().split('\n');
+  inputArray.pop();
+  const nextStep = inputArray.map(e => e.split(','));
+  return nextStep;
+}
